@@ -22,7 +22,7 @@ ft_model = fasttext.train_unsupervised(OUTPUT_TEXT, model='skipgram', dim=300, m
 NOTE: `OUTPUT_TEXT` is a text file with a line of text for every diagnosis code in every ICU visit.
 
 #### CNN implementation
-Current implementation of CNN embedding matix is also in `EmbeddingCNN.ipynb`.
+Current implementation of CNN embedding matrix is also in `EmbeddingCNN.ipynb`.
 
 This loads as input data all the unique ICD9 code descriptions at the lowest level (i.e. 4903 unique descriptions), and is trained to predict which code each description is by index value. During training the embedding matrix is passed through a dropout layer (0.5) and a final FC layer to get logits for CE Loss. After 100 training iterations the embedding matrix is returned after the Max Pooling layer to be used in the enhanced models.
 
