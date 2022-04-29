@@ -1,5 +1,7 @@
 ## dl4h: Paper Reproduction
 
+Original Paper: https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6921390/
+
 ### Questions
 1. Text embeddings (fastText)
 2. CNN implementation and embedding matrix
