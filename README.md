@@ -8,6 +8,11 @@ Original Paper: https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6921390/
 3. Use of embedding matrix ***E*** in enhanced models
 4. Calculation of visit-level precision and code-level accuracy
 
+### Setup
+The code in this repository uses Python 3.8 and PyTorch 1.10.
+It is highly recommended to create a Python virtual environment with Python 3.8 and then execute the following:
+`pip install -r requirements.txt`
+
 #### Text embeddings
 Current implementation of word embeddings is in `EmbeddingCNN.ipynb`.
 
