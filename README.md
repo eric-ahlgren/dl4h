@@ -2,6 +2,10 @@
 
 Original Paper: https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6921390/
 
+>Ma, F., Wang, Y., Xiao, H. et al. Incorporating medical code descriptions for diagnosis prediction in healthcare. BMC Med Inform Decis Mak 19, 267 (2019). https://doi.org/10.1186/s12911-019-0961-2
+
+
+
 ### Questions
 1. Text embeddings (fastText)
 2. CNN implementation and embedding matrix
