@@ -18,6 +18,29 @@ From the fastText link above, download the file `crawl-300d-2M-subword.zip` and 
 
 You will need to provide a local path to the downloaded MIMIC-III dataset which contains the individual .csv files.
 
+### Data Pre-processing
+The pre-processed data is provided for you in Python `pickle` format in the dir `data`. These files are simply lists of output to be loaded for training the various models. This is done to save time in testing the code since the data pre-processing takes about 65 mins to complete.
+
+To run data pre-processing from scratch the steps are as follows:
+1. Launch jupyter notebook from the root directory of the cloned repo: `jupyter notebook .`
+2. Open the jupyter notebook `DataProcessing.ipynb`
+3. In the 2nd cell, set the variable `MIMIC_DATA_PATH` to your local path to the MIMIC-III dataset
+4. Execute all cells in the notebook
+5. Output data will be saved to `data` folder in your local git repository
+
+### Training the models
+There are five baseline models and five enhanced models, as well as the CNN model for learning the embedding matrix of  diagnosis code descriptions. It is recommended to first train the CNN, and then train the baseline and ehanced models.
+
+To train the CNN make sure you have first downloaded the pre-trained fastText word vector model and extracted the .zip archive in the `data` folder if your locally cloned repository. The name of the file should be `crawl-300d-2M-subword.bin`.
+
+To train the model:
+1. Launch jupyter notebook from the root directory of the cloned repo: `jupyter notebook .`
+2. Open the jupyter notebook `EmbeddingCNN.ipynb`
+3. Execute all cells to train the model and save the trained embedding vector $E$ in the `data` dir as `embedding_matrix.pt`
+
+
+
+
 
 #### Text embeddings
 Current implementation of word embeddings is in `EmbeddingCNN.ipynb`.
