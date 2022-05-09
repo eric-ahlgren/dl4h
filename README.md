@@ -29,14 +29,31 @@ To run data pre-processing from scratch the steps are as follows:
 5. Output data will be saved to `data` folder in your local git repository
 
 ### Training the models
-There are five baseline models and five enhanced models, as well as the CNN model for learning the embedding matrix of  diagnosis code descriptions. It is recommended to first train the CNN, and then train the baseline and ehanced models.
+There are five baseline models and five enhanced models, as well as the CNN model for learning the embedding matrix of  diagnosis code descriptions. All models are provided as standalone jupyter notebooks that can be trained independently provided the necessary data is available. It is recommended to first train the CNN, and then train the baseline and ehanced models.
 
 To train the CNN make sure you have first downloaded the pre-trained fastText word vector model and extracted the .zip archive in the `data` folder if your locally cloned repository. The name of the file should be `crawl-300d-2M-subword.bin`.
 
 To train the model:
 1. Launch jupyter notebook from the root directory of the cloned repo: `jupyter notebook .`
 2. Open the jupyter notebook `EmbeddingCNN.ipynb`
-3. Execute all cells to train the model and save the trained embedding vector **E** in the `data` dir as `embedding_matrix.pt`
+3. Execute all cells to train and evaluate the model
+4. The trained model will be saved to the `models` dir
+5. The trained embedding vector **E** in the `data` dir as `embedding_matrix.pt` to be used in all enhanced models
+
+***Note***: The pre-trained EmbeddingCNN model is provided in the `models` dir, as well as the pre-trained embedding matrix in the `data` dir.
+
+To train the baseline and ehnaced models, the processs is similar:
+1. Launch jupyter notebook from the root directory of the cloned repo: `jupyter notebook .`
+2. Open the jupyter notebook for the desired model (i.e. `BaselineDipole.ipynb`)
+3. Execute all cells in the notebook to train and evaluate the model
+4. The trained model will be saved to the `models` dir
+
+***Note***: All models have a pre-trained model provided which can be loaded and evaluated to bypass training.
+
+To load the pre-trained models:
+1. Execute all cells in the desired notebook ***before*** the cell titled `Set num epochs and train model`
+2. Skip to the final cell titled `Load pre-trained model and evaluate` and execute this cell
+
 
 
 
