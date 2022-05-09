@@ -36,7 +36,7 @@ To train the CNN make sure you have first downloaded the pre-trained fastText wo
 To train the model:
 1. Launch jupyter notebook from the root directory of the cloned repo: `jupyter notebook .`
 2. Open the jupyter notebook `EmbeddingCNN.ipynb`
-3. Execute all cells to train the model and save the trained embedding vector $E$ in the `data` dir as `embedding_matrix.pt`
+3. Execute all cells to train the model and save the trained embedding vector ***E*** in the `data` dir as `embedding_matrix.pt`
 
 
 
