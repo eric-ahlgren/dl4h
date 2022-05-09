@@ -28,7 +28,7 @@ To run data pre-processing from scratch the steps are as follows:
 4. Execute all cells in the notebook
 5. Output data will be saved to `data` folder in your local git repository
 
-### Training the models
+### Training and evaluating the models
 There are five baseline models and five enhanced models, as well as the CNN model for learning the embedding matrix of  diagnosis code descriptions. All models are provided as standalone jupyter notebooks that can be trained independently provided the necessary data is available. It is recommended to first train the CNN, and then train the baseline and ehanced models.
 
 To train the CNN make sure you have first downloaded the pre-trained fastText word vector model and extracted the .zip archive in the `data` folder if your locally cloned repository. The name of the file should be `crawl-300d-2M-subword.bin`.
@@ -55,8 +55,11 @@ To load the pre-trained models:
 2. Skip to the final cell titled `Load pre-trained model and evaluate` and execute this cell
 
 
+### Overview of results
 
-
+| @k | MLP    |
+|----|--------|
+| 5  | 0.3490 |
 
 
 #### Text embeddings
