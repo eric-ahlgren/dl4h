@@ -14,9 +14,9 @@ It is highly recommended to create a Python virtual environment with Python 3.8 
 ### Data Download
 This project uses the publicly available [MIMIC-III dataset](https://mimic.mit.edu/docs/iii/) as well as the fastText pre-trained English word vectors linked [here](https://fasttext.cc/docs/en/english-vectors.html).
 
-Download the file `crawl-300d-2M-subword.zip` and store it in the `data` dir of the locally cloned repo.
+From the fastText link above, download the file `crawl-300d-2M-subword.zip` and store it in the `data` dir of the locally cloned repo.
 
-You will also need to provide a local path to the downloaded MIMIC-III dataset which contains the individual .csv files.
+You will need to provide a local path to the downloaded MIMIC-III dataset which contains the individual .csv files.
 
 
 #### Text embeddings
