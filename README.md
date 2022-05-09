@@ -3,20 +3,21 @@
 Original Paper:
 >Ma, F., Wang, Y., Xiao, H. et al. Incorporating medical code descriptions for diagnosis prediction in healthcare. BMC Med Inform Decis Mak 19, 267 (2019). https://doi.org/10.1186/s12911-019-0961-2
 
-
-
-### Questions
-1. Text embeddings (fastText)
-2. CNN implementation and embedding matrix
-3. Use of embedding matrix ***E*** in enhanced models
-4. Calculation of visit-level precision and code-level accuracy
-
 ### Setup
 The code in this repository uses Python 3.8 and PyTorch 1.10.
 
 It is highly recommended to create a Python virtual environment with Python 3.8 and then execute the following:
 
 `pip install -r requirements.txt`
+
+
+### Data Download
+This project uses the publicly available [MIMIC-III dataset](https://mimic.mit.edu/docs/iii/) as well as the fastText pre-trained English word vectors linked [here](https://fasttext.cc/docs/en/english-vectors.html).
+
+Download the file `crawl-300d-2M-subword.zip` and store it in the `data` dir of the locally cloned repo.
+
+You will also need to provide a local path to the downloaded MIMIC-III dataset which contains the individual .csv files.
+
 
 #### Text embeddings
 Current implementation of word embeddings is in `EmbeddingCNN.ipynb`.
